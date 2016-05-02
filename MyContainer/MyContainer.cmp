@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable" controller="MyContainerController">
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+   <aura:attribute name="myFavouriteAccount" type="Account"/>
+   <aura:attribute name="myFavouriteInstance" type="MyFavouriteClass"/>
+   <aura:attribute name="jsObject" type="Object"/>
+    
+   <c:MySubcomponent header="Hello"
+           numbers="[5,4,3,2,1]"
+           numbers2="[10,9,8,7,6]"
+           ratingsByProduct="{ z: 3, y: 7 }"
+           myFavouriteAccount="{!v.myFavouriteAccount}"
+           myFavouriteInstance="{!v.myFavouriteInstance}"
+           jsObject="{!v.jsObject}"        
+	/>
+</aura:component>
